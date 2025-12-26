@@ -1,10 +1,11 @@
 %-------------------------------------
-% Resum in LaTeX (XeLaTeX)
-% Author:  HF Yuan
-% Project: https://github.com/xyz-yuanhf/yuan-resume
-% Base on: https://github.com/mattyHerzig/mattys_resume
-%          http://www.jianxu.net/en/
-% License: MIT
+% Adapted from:
+%   Resume in LaTeX (XeLaTeX)
+%   Author:  HF Yuan
+%   Project: https://github.com/xyz-yuanhf/yuan-resume
+%   Base on: https://github.com/mattyHerzig/mattys_resume
+%            http://www.jianxu.net/en/
+%   License: MIT
 %------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
@@ -41,17 +42,17 @@
 %     BoldItalicFont=*-BoldItalic
 %     ]
 \newfontfamily\Calluna{Calluna}[
-    Path=./Fonts/Calluna/,
+    Path=./style/Fonts/Calluna/,
     Extension = .otf,
     UprightFont=*-Regular
     ]
 \newfontfamily\Courier{CourierNew}[
-    Path=./Fonts/Courier/,
+    Path=./style/Fonts/Courier/,
     Extension = .ttf,
     UprightFont=*-Regular
     ]
 \newfontfamily\CronosLt{CronosProLT}[
-    Path=./Fonts/Cronos/,
+    Path=./style/Fonts/Cronos/,
     Extension = .ttf,
     UprightFont=*-Regular
     ]
@@ -135,6 +136,6 @@
 
 % GitHub icon command (clickable)
 \newcommand{\githubIcon}[1]{%
-    \href{#1}{\raisebox{-0.15em}{\includegraphics[height=0.9em]{./github.png}}}%
+    \href{#1}{\raisebox{-0.15em}{\includegraphics[height=0.9em]{./style/github.png}}}%
 }
 

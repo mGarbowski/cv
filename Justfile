@@ -5,12 +5,12 @@ default:
 # Build Polish version of the CV
 build-pl:
     mkdir -p build
-    xelatex -output-directory=build -jobname=cv_pl main_pl.tex
+    xelatex -output-directory=build -jobname=cv_pl cv-pl.tex
 
 # Build English version of the CV
 build-en:
     mkdir -p build
-    xelatex -output-directory=build -jobname=cv_en main_en.tex
+    xelatex -output-directory=build -jobname=cv_en cv-en.tex
 
 # Build both versions of the CV
 build: build-pl build-en
