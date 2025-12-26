@@ -35,21 +35,26 @@
 }{
 \eduHeading
   {Wydział Elektroniki i Technik Informacyjnych}{Politechnika Warszawska}
-  {Informatyka, inżynierskie}{2022 - 2026 \footnotesize{\textit{(oczekiwane)}}}
+  {Informatyka, inżynierskie}{2022 - 2026 \footnotesize{\textit{(planowane)}}}
 \itemListStart
   \myItem{Specjalizacja: Sztuczna Inteligencja}
-  \myItem{Od 2023 roku w programie stypendialnym \textit{studia id}}
+  \myItem{W programie stypendialnym \textit{studia id} 2023-2025}
+  \myItem{Temat pracy inżynierskiej: \textit{Poprawa jakości systemu rozpoznawania twarzy w warunkach rzeczywistych przez augmentację danych treningowych}}
 \itemListEnd
 
-\eduHeading
-  {XXVII LO im. Tadeusza Czackiego}{Warszawa, Polska}
-  {Profil matematyczno-fizyczno-informatyczny}{2019 - 2022}
 }
 
-% -------------------- STAŻE --------------------
+% -------------------- DOŚWIADCZENIE --------------------
 \sectionBlock{
 \section{Doświadczenie}
 }{
+\internHeading
+  {Hermes Data \& Software Solutions}{Warszawa, Polska}{03.2025 - obecnie}
+\itemListStart
+  \myItem{Fullstack Developer}
+  \myItem{Implementacja systemu CRM dla centrum biznesowego}
+  \myItem{TypeScript, React, Python, Django REST Framework, PostgreSQL}
+\itemListEnd
 \internHeading
   {Ringier Axel Springer Polska}{Warszawa, Polska}{07.2024 - 09.2024}
 \itemListStart
@@ -71,22 +76,42 @@
 }{
 \skillListStart
 \justifying
-\item \emph{Języki}: angielski C2, francuski A2.
-\item \emph{Programowanie}: 
-    {\Courier \fontsize{11pt}{11pt}\selectfont Python},
-    {\Courier \fontsize{11pt}{11pt}\selectfont TypeScript},
-    {\Courier \fontsize{11pt}{11pt}\selectfont Java}, 
-    {\Courier \fontsize{11pt}{11pt}\selectfont C++}, 
-    {\Courier \fontsize{11pt}{11pt}\selectfont SQL},
-    {\Courier \fontsize{11pt}{11pt}\selectfont React},
-    {\Courier \fontsize{11pt}{11pt}\selectfont Spring}.
-\item \emph{Narzędzia}:
-    {\Courier \fontsize{11pt}{11pt}\selectfont Git},
-    {\Courier \fontsize{11pt}{11pt}\selectfont GitHub Actions},
-    {\Courier \fontsize{11pt}{11pt}\selectfont Docker},
-    {\Courier \fontsize{11pt}{11pt}\selectfont Linux},
-    {\Courier \fontsize{11pt}{11pt}\selectfont Bash}.
-\item \emph{Inne}: Uczenie maszynowe, optymalizacja, wzorce projektowe, programowanie liniowe, UML.
+\item \emph{Języki obce}: angielski C2, francuski A2.
+\item \emph{Python}: 
+    Stos naukowy i ML (
+      \tech{numpy},
+      \tech{scikit-learn},
+      \tech{PyTorch},
+      \tech{transformers},
+      \tech{Weights \& Biases}
+    ),
+    Web (
+      \tech{Django},
+      \tech{Django REST Framework},
+      \tech{FastAPI}
+    ).
+\item \emph{TypeScript/JavaScript}: 
+    \tech{React}, 
+    \tech{Redux}, 
+    \tech{NodeJS}.
+\item \emph{Java}: 
+    \tech{Spring Framework}.
+\item \emph{Inne języki}: 
+    \tech{C++}, 
+    \tech{Rust}.
+\item \emph{Bazy danych SQL i NoSQL}:
+    \tech{PostgreSQL},
+    \tech{ChromaDB}.
+\item \emph{DevOps}: 
+    \tech{Git}, 
+    \tech{Docker}, 
+    \tech{CI/CD}, 
+    \tech{Terraform}, 
+    \tech{Ansible}, 
+    \tech{Azure}, 
+    \tech{Linux}, 
+    \tech{Bash}.
+\item \emph{Inne}: Uczenie maszynowe, głębokie sieci neuronowe, modele językowe, NLP, algorytmy optymalizacji, architektura i inżynieria oprogramowania, modelowanie (\tech{UML}, \tech{BPMN}).
 \skillListEnd
 }
 
@@ -97,33 +122,65 @@
 
 \projHeading
 {\textbf{Olivia CRM}}
-{Implemnetacja systemu CRM}
+{Implementacja i rozwój systemu CRM dla centrum biznesowego. 
+\newline TypeScript, React, Python, Django/DRF, PostgreSQL}
 {Hermes Data \& Software}
 
 \projHeading
 {\textbf{Foto Editor}}
-{Front-endowa aplikacja do edycji zdjęć oparta na Canvas API. Zintegrowana z wewnętrznym systemem wydawniczym. TypeScript, React, Redux, FabricJS.}
+{Front-endowa aplikacja do edycji zdjęć oparta na Canvas API. Zintegrowana z wewnętrznym systemem wydawniczym. 
+\newline TypeScript, React, Redux, FabricJS.}
 {RASP}
 
 \projHeading
-{\textbf{Optymalizacja ruchu w sieci telekomunikacyjnej}}
-{Model programowania całkowitoliczbowego oraz aplikacja webowa. Pyomo, FastAPI, React, Docker.}
+{\textbf{Badania nad modelami rozpoznawania twarzy} \githubIcon{https://github.com/mGarbowski/thesis}}
+{Badania nad technikami poprawy jakości systemu opartego na splotowych sieciach neuronowych, 
+z wykorzystaniem rzeczywistych danych. Implementacja własnego systemu rozpoznawania twarzy.
+\newline Python, PyTorch, OpenCV, Dlib, Weights \& Biases.}
+{Praca inżynierska, PW}
+
+\projHeading
+{\textbf{Mikroserwis z modelem predykcyjnym dla klona Booking.com} \githubIcon{https://github.com/mGarbowski/ium-projekt}}
+{Analiza danych, inżynieria cech, wytrenowanie modelu predykcyjnego i implementacja mikroserwisu wykonującego predykcję oceny hotelu.
+\newline Python, PyTorch, Scikit-learn, Pandas, FastAPI, Docker.}
 {Projekt grupowy, PW}
 
 \projHeading
-{\textbf{Platforma do recenzowania kursów językowych}}
-{Aplikacja webowa. Spring, React, PostgreSQL, Docker.}
-{Projekt grupowy, PW}
-
-\projHeading
-{\textbf{Ewolucja i symulacja pojazdów}}
-{Aplikacja desktopowa implementująca algorytm ewolucyjny do optymalizacji modeli samochodów w symulacji. C++, ImGui, SFML, Box2D.}
-{Projekt grupowy, PW}
-
-\projHeading
-{\textbf{ID3 i modele zespołowe dla problemu klasyfikacji wieloklasowej}}
-{Porównanie klasycznych drzew decyzyjnych ID3 i modeli zespołowych wykorzystujących podejście One-vs-One i One-vs-Rest. Python.}
+{\textbf{Aplikacja RAG dla zbioru notatek z wykładów} \githubIcon{https://github.com/mGarbowski/llm-projekt}}
+{Czatbot oparty na modelu językowym Bielik, wykorzystujący podejście Retrieval-Augmented Generation.
+\newline Python, PyTorch, HuggingFace, sentence-transformers, ChromaDB, FastAPI.}
 {Projekt indywidualny, PW}
+
+\projHeading
+{\textbf{Ewolucja i symulacja pojazdów} \githubIcon{https://github.com/mGarbowski/zpr-projekt}}
+{Aplikacja desktopowa z silnikiem fizycznym i algorytmem ewolucyjnym. 
+\newline C++, ImGui, SFML, Box2D.}
+{Projekt grupowy, PW}
+
+\projHeading
+{\textbf{Renderowanie roślin z użyciem L-systemów w OpenGL} \githubIcon{https://github.com/mbienkowsk/LSystemTreeGenerator}}
+{Aplikacja desktopowa z GUI, renderer sceny 3D.
+\newline OpenGL, Rust}
+{Projekt grupowy, PW}
+
+\projHeading
+{\textbf{Wdrożenie aplikacji webowej na chmurze publicznej} \githubIcon{https://github.com/mGarbowski/wus-lab-2}}
+{Zautomatyzowane wdrożenie aplikacji na chmurze Azure.
+\newline Azure, Ansible, Terraform, Docker, Bash.}
+{Projekt grupowy, PW}
+
+% \projHeading
+% {\textbf{Optymalizacja ruchu w sieci telekomunikacyjnej} \githubIcon{https://github.com/mGarbowski/pzsp2-projekt}}
+% {Model programowania całkowitoliczbowego oraz aplikacja webowa.
+% \newline Pyomo, FastAPI, React, Docker.}
+% {Projekt grupowy, PW}
+
+% \projHeading
+% {\textbf{Platforma do recenzowania kursów językowych} \githubIcon{https://github.com/threescomplement/pap-projekt}}
+% {Aplikacja webowa. 
+% \newline Spring, React, PostgreSQL, Docker.}
+% {Projekt grupowy, PW}
+
 }
 
 \vfill

@@ -21,6 +21,14 @@
 \usepackage{enumitem}
 \usepackage{tabularx}
 \usepackage{ragged2e}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=black,
+}
 
 % Font style
 \usepackage{fontspec}
@@ -121,3 +129,12 @@
       \textit{#2} \hfill #3 \\
     \end{tabular}\vspace{2pt}
 }
+
+% Custom command for code/tech terms
+\newcommand{\tech}[1]{{\Courier \fontsize{11pt}{11pt}\selectfont #1}}
+
+% GitHub icon command (clickable)
+\newcommand{\githubIcon}[1]{%
+    \href{#1}{\raisebox{-0.15em}{\includegraphics[height=0.9em]{./github.png}}}%
+}
+
