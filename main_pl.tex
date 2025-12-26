@@ -1,0 +1,132 @@
+%-------------------------------------
+% Resum in LaTeX (XeLaTeX)
+% Author:  HF Yuan
+% Project: https://github.com/xyz-yuanhf/yuan-resume
+% Base on: https://github.com/mattyHerzig/mattys_resume
+%          http://www.jianxu.net/en/
+% License: MIT
+%------------------------------------
+
+\documentclass[a4paper, 10pt]{article}
+\usepackage[polish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{myresume}  % Pakiet stylu
+
+
+% --------------------  START  --------------------
+\begin{document}
+
+% -------------------- NAGŁÓWEK --------------------
+\begin{flushright}
+  \setstretch{0.6}
+  \item {\Calluna (+48) 665522039}  % Numer telefonu
+  \item {\Calluna mikolaj.garbowski@gmail.com}  % Adres e-mail
+  \item {\Calluna https://github.com/mGarbowski}  % Strona domowa
+\end{flushright}\vspace{-45pt}
+
+\begin{flushleft}
+  {\Calluna \fontsize{30pt}{30pt}\selectfont \textsc{Mikołaj Garbowski}}
+  \noindent\rule{\textwidth}{0.4pt}
+\end{flushleft}
+
+% -------------------- EDUKACJA --------------------
+\sectionBlock{
+\section{Edukacja}
+}{
+\eduHeading
+  {Wydział Elektroniki i Technik Informacyjnych}{Politechnika Warszawska}
+  {Informatyka, inżynierskie}{2022 - 2026 \footnotesize{\textit{(oczekiwane)}}}
+\itemListStart
+  \myItem{Specjalizacja: Sztuczna Inteligencja}
+  \myItem{Od 2023 roku w programie stypendialnym \textit{studia id}}
+\itemListEnd
+
+\eduHeading
+  {XXVII LO im. Tadeusza Czackiego}{Warszawa, Polska}
+  {Profil matematyczno-fizyczno-informatyczny}{2019 - 2022}
+}
+
+% -------------------- STAŻE --------------------
+\sectionBlock{
+\section{Doświadczenie}
+}{
+\internHeading
+  {Ringier Axel Springer Polska}{Warszawa, Polska}{07.2024 - 09.2024}
+\itemListStart
+  \myItem{Fullstack Developer (stażysta)}
+  \myItem{Stworzenie produkcyjnej aplikacji webowej do edycji zdjęć}
+  \myItem{TypeScript, NodeJS, React, AWS}
+\itemListEnd
+\internHeading
+  {Sages}{Warszawa, Polska}{07.2021 - 09.2021}
+\itemListStart
+  \myItem{Junior Support Engineer}
+  \myItem{Praca nad wdrażaniem systemu Omega-PSIR dla instytucji akademickich}
+\itemListEnd
+}
+
+% -------------------- UMIEJĘTNOŚCI --------------------
+\sectionBlock{
+\section{Umiejętności}
+}{
+\skillListStart
+\justifying
+\item \emph{Języki}: angielski C2, francuski A2.
+\item \emph{Programowanie}: 
+    {\Courier \fontsize{11pt}{11pt}\selectfont Python},
+    {\Courier \fontsize{11pt}{11pt}\selectfont TypeScript},
+    {\Courier \fontsize{11pt}{11pt}\selectfont Java}, 
+    {\Courier \fontsize{11pt}{11pt}\selectfont C++}, 
+    {\Courier \fontsize{11pt}{11pt}\selectfont SQL},
+    {\Courier \fontsize{11pt}{11pt}\selectfont React},
+    {\Courier \fontsize{11pt}{11pt}\selectfont Spring}.
+\item \emph{Narzędzia}:
+    {\Courier \fontsize{11pt}{11pt}\selectfont Git},
+    {\Courier \fontsize{11pt}{11pt}\selectfont GitHub Actions},
+    {\Courier \fontsize{11pt}{11pt}\selectfont Docker},
+    {\Courier \fontsize{11pt}{11pt}\selectfont Linux},
+    {\Courier \fontsize{11pt}{11pt}\selectfont Bash}.
+\item \emph{Inne}: Uczenie maszynowe, optymalizacja, wzorce projektowe, programowanie liniowe, UML.
+\skillListEnd
+}
+
+% -------------------- PROJEKTY --------------------
+\sectionBlock{
+\section{Projekty}
+}{
+
+\projHeading
+{\textbf{Olivia CRM}}
+{Implemnetacja systemu CRM}
+{Hermes Data \& Software}
+
+\projHeading
+{\textbf{Foto Editor}}
+{Front-endowa aplikacja do edycji zdjęć oparta na Canvas API. Zintegrowana z wewnętrznym systemem wydawniczym. TypeScript, React, Redux, FabricJS.}
+{RASP}
+
+\projHeading
+{\textbf{Optymalizacja ruchu w sieci telekomunikacyjnej}}
+{Model programowania całkowitoliczbowego oraz aplikacja webowa. Pyomo, FastAPI, React, Docker.}
+{Projekt grupowy, PW}
+
+\projHeading
+{\textbf{Platforma do recenzowania kursów językowych}}
+{Aplikacja webowa. Spring, React, PostgreSQL, Docker.}
+{Projekt grupowy, PW}
+
+\projHeading
+{\textbf{Ewolucja i symulacja pojazdów}}
+{Aplikacja desktopowa implementująca algorytm ewolucyjny do optymalizacji modeli samochodów w symulacji. C++, ImGui, SFML, Box2D.}
+{Projekt grupowy, PW}
+
+\projHeading
+{\textbf{ID3 i modele zespołowe dla problemu klasyfikacji wieloklasowej}}
+{Porównanie klasycznych drzew decyzyjnych ID3 i modeli zespołowych wykorzystujących podejście One-vs-One i One-vs-Rest. Python.}
+{Projekt indywidualny, PW}
+}
+
+\vfill
+\noindent\small Wyrażam zgodę na przetwarzanie moich danych osobowych zawartych w mojej aplikacji dla potrzeb niezbędnych do realizacji procesu rekrutacji zgodnie z ustawą z dnia 10 maja 2018 r. o ochronie danych osobowych (Dz. U. 2018, poz. 1000) oraz Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych (RODO).
+
+\end{document}
