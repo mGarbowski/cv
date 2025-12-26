@@ -1,5 +1,5 @@
 %-------------------------------------
-% Resum in LaTeX (XeLaTeX)
+% Resume in LaTeX (XeLaTeX)
 % Author:  HF Yuan
 % Project: https://github.com/xyz-yuanhf/yuan-resume
 % Base on: https://github.com/mattyHerzig/mattys_resume
@@ -8,17 +8,20 @@
 %------------------------------------
 
 \documentclass[a4paper, 10pt]{article}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
 \usepackage{myresume}  % Style package
+
 
 % --------------------  START  --------------------
 \begin{document}
 
-% -------------------- HEADING --------------------
+% -------------------- HEADER --------------------
 \begin{flushright}
   \setstretch{0.6}
   \item {\Calluna (+48) 665522039}  % Phone number
-  \item {\Calluna mikolaj.garbowski@gmail.com}  % E-mail address
-  \item {\Calluna https://github.com/mGarbowski}  % Home page
+  \item {\Calluna mikolaj.garbowski@gmail.com}  % Email address
+  \item {\Calluna \url{https://github.com/mGarbowski}}  % Homepage
 \end{flushright}\vspace{-45pt}
 
 \begin{flushleft}
@@ -31,23 +34,29 @@
 \section{Education}
 }{
 \eduHeading
-  {Faculty of Electronics and Information Technology}{Warsaw University of Technology}
-  {BSE in Computer Science}{2022 - 2026 \footnotesize{\textit{(expected)}}}
+  {Faculty of Electronics and Information Technology}
+  {\newline Warsaw University of Technology}
+  {BSE in Computer Science}
+  {2022 - 2026 \footnotesize{\textit{(planned)}}}
 \itemListStart
   \myItem{Specialization: Artificial Intelligence}
-  \myItem{In \textit{studia id} scholarship programme since 2023}
+  \myItem{Scholarship program \textit{studia id} 2023-2025}
+  \myItem{Bachelor's thesis: \textit{Training Data Augmentation for Improving Face Recognition Quality in Real-World Conditions}}
 \itemListEnd
-
-\eduHeading
-  {Tadeusz Czacki High School No. 27}{Warsaw, Poland}
-  {Mathematics, physics, computer science profile}{2019 - 2022}
 
 }
 
-% -------------------- INTERNSHIPS --------------------
+% -------------------- EXPERIENCE --------------------
 \sectionBlock{
-\section{Internships}
+\section{Experience}
 }{
+\internHeading
+  {Hermes Data \& Software Solutions}{Warsaw, Poland}{03.2025 - present}
+\itemListStart
+  \myItem{Fullstack Developer}
+  \myItem{Implementation of CRM system for business center}
+  \myItem{TypeScript, React, Python, Django REST Framework, PostgreSQL}
+\itemListEnd
 \internHeading
   {Ringier Axel Springer Polska}{Warsaw, Poland}{2024.07 - 2024.09}
 \itemListStart
@@ -63,29 +72,48 @@
 \itemListEnd
 }
 
-
 % -------------------- SKILLS --------------------
 \sectionBlock{
 \section{Skills}
 }{
 \skillListStart
 \justifying
-\item \emph{Languages}: English C2, French A2.
-\item \emph{Programming}: 
-    {\Courier \fontsize{11pt}{11pt}\selectfont Python},
-    {\Courier \fontsize{11pt}{11pt}\selectfont TypeScript},
-    {\Courier \fontsize{11pt}{11pt}\selectfont Java}, 
-    {\Courier \fontsize{11pt}{11pt}\selectfont C++}, 
-    {\Courier \fontsize{11pt}{11pt}\selectfont SQL},
-    {\Courier \fontsize{11pt}{11pt}\selectfont React},
-    {\Courier \fontsize{11pt}{11pt}\selectfont Spring}.
-\item \emph{Tools}:
-    {\Courier \fontsize{11pt}{11pt}\selectfont Git},
-    {\Courier \fontsize{11pt}{11pt}\selectfont GitHub Actions},
-    {\Courier \fontsize{11pt}{11pt}\selectfont Docker},
-    {\Courier \fontsize{11pt}{11pt}\selectfont Linux},
-    {\Courier \fontsize{11pt}{11pt}\selectfont Bash}.
-\item \emph{Other}: Machine Learning, Optimization, Design Patterns, Linear Programming, UML.
+\item \emph{Foreign languages}: English C2, French A2.
+\item \emph{Python}: 
+    Scientific and ML stack (
+      \tech{numpy},
+      \tech{scikit-learn},
+      \tech{PyTorch},
+      \tech{transformers},
+      \tech{Weights \& Biases}
+    ),
+    Web frameworks (
+      \tech{Django},
+      \tech{Django REST Framework},
+      \tech{FastAPI}
+    ).
+\item \emph{TypeScript/JavaScript}: 
+    \tech{React}, 
+    \tech{Redux}, 
+    \tech{NodeJS}.
+\item \emph{Java}: 
+    \tech{Spring Framework}.
+\item \emph{Other languages}: 
+    \tech{C++}, 
+    \tech{Rust}.
+\item \emph{SQL and NoSQL databases}:
+    \tech{PostgreSQL},
+    \tech{ChromaDB}.
+\item \emph{DevOps}: 
+    \tech{Git}, 
+    \tech{Docker}, 
+    \tech{CI/CD}, 
+    \tech{Terraform}, 
+    \tech{Ansible}, 
+    \tech{Azure}, 
+    \tech{Linux}, 
+    \tech{Bash}.
+\item \emph{Other}: Machine learning, deep neural networks, language models, NLP, optimization algorithms, software architecture and engineering, modeling (\tech{UML}, \tech{BPMN}).
 \skillListEnd
 }
 
@@ -95,36 +123,68 @@
 }{
 
 \projHeading
-{\textbf{Foto Editor app}}
-{Front-end image editor app based on Canvas API. Integrated with internal publishing system. Using TypeScript, React, Redux, FabricJS.}
-{Internship project, RASP}
+{\textbf{Olivia CRM}}
+{Implementation and development of CRM system for business center.}
+{TypeScript, React, Python, Django/DRF, PostgreSQL}
+{Hermes Data \& Software}
 
 \projHeading
-{\textbf{Telecom network traffic optimization}}
-{Mixed integer programming optimization model and web app. Using Pyomo, FastAPI, React, Docker}
+{\textbf{Photo Editor}}
+{Front-end photo editing application based on Canvas API. Integrated with internal publishing system.}
+{TypeScript, React, Redux, FabricJS.}
+{RASP}
+
+\projHeading
+{\textbf{Face Recognition Model Research} \githubIcon{https://github.com/mGarbowski/thesis}}
+{Research on techniques for improving convolutional neural network-based system quality using real-world data. Implementation of custom face recognition system.}
+{Python, PyTorch, OpenCV, Dlib, Weights \& Biases.}
+{Bachelor's thesis, WUT}
+
+\projHeading
+{\textbf{Predictive Model Microservice for Booking.com Clone} \githubIcon{https://github.com/mGarbowski/ium-projekt}}
+{Data analysis, feature engineering, predictive model training and microservice implementation for hotel rating prediction.}
+{Python, PyTorch, Scikit-learn, Pandas, FastAPI, Docker.}
 {Group project, WUT}
 
 \projHeading
-{\textbf{Platform for reviewing language courses}}
-{Web application. Using Spring, React, PostgreSQL, Docker.}
-{Group project, WUT}
-
-\projHeading
-{\textbf{Car evolution and simulation}}
-{Desktop application implementing evolutionary algorithm for optimizing car models for a simulation. Using C++, ImGui, SFML, Box2D.}
-{Group project, WUT}
-
-\projHeading
-{\textbf{ID3 and ensemble models for multi-class classification problem}}
-{Comparison of classic ID3 decision trees and ensemble models using One-vs-One and One-vs-Rest approach. Using Python.}
+{\textbf{RAG Application for Lecture Notes} \githubIcon{https://github.com/mGarbowski/llm-projekt}}
+{Chatbot based on Bielik language model, using Retrieval-Augmented Generation approach.}
+{Python, HuggingFace, sentence-transformers, ChromaDB.}
 {Individual project, WUT}
 
+\projHeading
+{\textbf{Vehicle Evolution and Simulation} \githubIcon{https://github.com/mGarbowski/zpr-projekt}}
+{Desktop application with physics engine and evolutionary algorithm.}
+{C++, ImGui, SFML, Box2D.}
+{Group project, WUT}
+
+\projHeading
+{\textbf{Plant Rendering Using L-Systems in OpenGL} \githubIcon{https://github.com/mbienkowsk/LSystemTreeGenerator}}
+{Desktop application with GUI, 3D scene renderer.}
+{OpenGL, Rust}
+{Group project, WUT}
+
+\projHeading
+{\textbf{Web Application Deployment on Public Cloud} \githubIcon{https://github.com/mGarbowski/wus-lab-2}}
+{Automated application deployment on Azure cloud.}
+{Azure, Ansible, Terraform, Docker, Bash.}
+{Group project, WUT}
+
+% \projHeading
+% {\textbf{Telecommunication Network Traffic Optimization} \githubIcon{https://github.com/mGarbowski/pzsp2-projekt}}
+% {Integer programming model and web application.}
+% {Pyomo, FastAPI, React, Docker.}
+% {Group project, WUT}
+
+% \projHeading
+% {\textbf{Language Course Review Platform} \githubIcon{https://github.com/threescomplement/pap-projekt}}
+% {Web application.}
+% {Spring, React, PostgreSQL, Docker.}
+% {Group project, WUT}
 
 }
 
 \vfill
 \noindent\small I hereby consent to the processing of my personal data included in my application for the purposes of the recruitment process in accordance with the Act of 10 May 2018 on Personal Data Protection (Journal of Laws 2018, item 1000) and Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data (GDPR).
 
-
 \end{document}
-
