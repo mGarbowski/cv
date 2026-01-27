@@ -1,0 +1,103 @@
+name: Build and Deploy CV
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-xetex texlive-fonts-extra texlive-latex-extra
+
+      - name: Build PDFs
+        run: |
+          mkdir -p build
+          mkdir -p pdf
+          xelatex -output-directory=build -jobname=cv_en cv-en.tex
+          xelatex -output-directory=build -jobname=cv_pl cv-pl.tex
+          cp build/cv_en.pdf pdf/cv-mikolaj-garbowski_en.pdf
+          cp build/cv_pl.pdf pdf/cv-mikolaj-garbowski_pl.pdf
+
+      - name: Create index.html
+        run: |
+          cat > pdf/index.html << 'EOF'
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>CV</title>
+              <style>
+                  body {
+                      font-family: Arial, sans-serif;
+                      max-width: 800px;
+                      margin: 50px auto;
+                      padding: 20px;
+                  }
+                  h1 {
+                      color: #333;
+                  }
+                  .cv-links {
+                      margin-top: 30px;
+                  }
+                  .cv-links a {
+                      display: inline-block;
+                      margin: 10px 20px 10px 0;
+                      padding: 15px 30px;
+                      background-color: #007bff;
+                      color: white;
+                      text-decoration: none;
+                      border-radius: 5px;
+                      font-size: 18px;
+                  }
+                  .cv-links a:hover {
+                      background-color: #0056b3;
+                  }
+              </style>
+          </head>
+          <body>
+              <h1>CV Downloads</h1>
+              <div class="cv-links">
+                  <a href="cv-mikolaj-garbowski_en.pdf" download>Download CV (English)</a>
+                  <a href="cv-mikolaj-garbowski_pl.pdf" download>Download CV (Polski)</a>
+              </div>
+          </body>
+          </html>
+          EOF
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './pdf'
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
